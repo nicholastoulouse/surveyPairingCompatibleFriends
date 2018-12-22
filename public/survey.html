@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome Glyphicons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+        .container {
+            font-size: 1.5em;
+        }
+    </style>
+    <title>Friends Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Survey Questions</h1>
+        <h4>Please answer the below questionnaire on friend finder in order to receive qualified friend suggestions.</h3>
+        <hr/>
+        <form action="/routing/apiRoutes.js" method="post">
+            <!-- <label for="name"></label><input type="text" id="name" name="name"> -->
+            <h3><strong>About You</strong></h3>
+            <h4>Name (Required)</h4>
+            <input type="text" id="name" class="form-control" required>
+        
+            <h4>Link to Photo Image</h4>
+            <input type="text" id="photo" class="form-control">
+        
+            <hr>
+            <ol>
+                <li>
+                    <label for="q1">What kind of book might you take with you on a trip if you had room to pack one?</label>
+                    <fieldset>
+                        <input type="radio" name="q1" value="poetry"> Poetry<br />
+                        <input type="radio" name="q1" value="novels"> A novel<br />
+                        <input type="radio" name="q1" value="shortstories"> Short stories<br />
+                        <input type="radio" name="q1" value="selfhelp"> Enlightenment reading<br />
+                        <input type="radio" name="q1" value="scripture"> Scripture<br /><br />
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="q2">What is your favorite landscape?</label>
+                    <fieldset>
+                        <input type="radio" name="q2" value="coastal"> Coastal<br />
+                        <input type="radio" name="q2" value="mountains"> Mountains<br />
+                        <input type="radio" name="q2" value="forest"> Forest<br />
+                        <input type="radio" name="q2" value="desert"> Desert<br />
+                        <input type="radio" name="q2" value="urban"> Urban<br /><br />
+                    </fieldset>
+                    </label>
+                </li>
+                <li>
+                    <label for="q3">Name a favorite hobby?</label>
+                    <fieldset>
+                        <input type="radio" name="q3" value="artscrafts"> Arts & Crafts<br />
+                        <input type="radio" name="q3" value="hiking"> Hikes<br />
+                        <input type="radio" name="q3" value="travel"> Travel<br />
+                        <input type="radio" name="q3" value="fitness"> Fitness Activity<br />
+                        <input type="radio" name="q3" value="cooking"> Cooking<br /><br />
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="q4">What is your favorite kind of food?</label>
+                    <fieldset>
+                        <input type="radio" name="q4" value="european"> European<br />
+                        <input type="radio" name="q4" value="asian"> Asian<br />
+                        <input type="radio" name="q4" value="vegetarian"> Vegetarian<br />
+                        <input type="radio" name="q4" value="fish"> Fish<br />
+                        <input type="radio" name="q4" value="meat"> Meat<br /><br />
+                    </fieldset>
+                    </label>
+                </li>
+                <li>
+                    <label for="q5">What is your favorite pet?</label>
+                    <fieldset>
+                        <input type="radio" name="q5" value="cats"> Cats<br />
+                        <input type="radio" name="q5" value="dogs"> Dogs<br />
+                        <input type="radio" name="q5" value="birds"> Birds<br />
+                        <input type="radio" name="q5" value="small mammals"> Small mammals<br />
+                        <input type="radio" name="q5" value="fish"> Fish<br /><br />
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="q6">What is your favorite way to spend some time with someone?</label>
+                    <fieldset>
+                        <input type="radio" name="q6" value="park"> Day in the Park<br />
+                        <input type="radio" name="q6" value="museumormovie"> Museum exhibit or Movie<br />
+                        <input type="radio" name="q6" value="hike"> Day trip or hike<br />
+                        <input type="radio" name="q6" value="walking"> Walking tour or shopping<br />
+                        <input type="radio" name="q6" value="eat"> Out to eat<br /><br />
+                    </fieldset>
+                    </label>
+                </li>
+                <li>
+                    <label for="q7">If you had to pick one, what quality might you cherish best in a person?</label>
+                    <fieldset>
+                        <input type="radio" name="q7" value="kindness"> Kindness<br />
+                        <input type="radio" name="q7" value="romance"> Romance<br />
+                        <input type="radio" name="q7" value="provider"> Provides for me<br />
+                        <input type="radio" name="q7" value="tenderness"> Tenderness<br />
+                        <input type="radio" name="q7" value="Humor"> Humor / Fun<br /><br />
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="q8">What nourishes your soul?</label>
+                    <fieldset>
+                        <input type="radio" name="q8" value="buddhist"> Eastern philosophy<br />
+                        <input type="radio" name="q8" value="mountains"> Western thought / logic<br />
+                        <input type="radio" name="q8" value="catholic"> Catholic<br />
+                        <input type="radio" name="q8" value="protestant"> Protestant or Other<br />
+                        <input type="radio" name="q8" value="muslim"> Muslim<br /><br />
+                    </fieldset>
+                    </label>
+                </li>
+                <li>
+                    <label for="q9">What game do you like on rainy days indoors?</label>
+                    <fieldset>
+                        <input type="radio" name="q9" value="cards"> Cards<br />
+                        <input type="radio" name="q9" value="chess"> Chess<br />
+                        <input type="radio" name="q9" value="roll"> Any form of dice game<br />
+                        <input type="radio" name="q9" value="crafts"> Crafts<br />
+                        <input type="radio" name="q9" value="trivia"> Trivia<br /><br />
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="q10">What archetype might more closely describe you as a woman?</label>
+                    <fieldset>
+                        <input type="radio" name="q10" value="mystic"> Mystic<br />
+                        <input type="radio" name="q10" value="huntress"> Huntress<br />
+                        <input type="radio" name="q10" value="mother"> Mother<br />
+                        <input type="radio" name="q10" value="sage"> Sage<br />
+                        <input type="radio" name="q10" value="lover"> Lover<br /><br />
+                    </fieldset>
+                    </label>
+                </li>
+            </ol>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Submit</button>
+        <!-- <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>Submit</button> -->
+        </form>
+            
+        <!-- Modal -->
+        <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title"><strong>Best Match</strong></h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="match-name"></h2>
+                <img id="match-img" src="http://lorempixel.com/400/300" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+            
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+            
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            <script>
+                function processMatches(){
+                    console.log("Button working, yay!");
+                }
+            </script>
+    </body>
+</html>
